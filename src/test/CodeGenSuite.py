@@ -49,12 +49,23 @@ class CheckCodeGenSuite(unittest.TestCase):
     #     """
     #     expect = "-3.2"
     #     self.assertTrue(TestCodeGen.test(input,expect,505))
-    def test6(self):
+    # def test6(self):
+    #     input = """
+    #     procedure main();
+    #     begin
+    #         putBool(not True);
+    #     end
+    #     """
+    #     expect = "false"
+    #     self.assertTrue(TestCodeGen.test(input,expect,506))
+    def test7(self):
         input = """
         procedure main();
-        begin
-            putBool(not True);
+        var a: integer;
+        begin 
+            a := 3;
+            putInt(a);
         end
         """
         expect = "false"
-        self.assertTrue(TestCodeGen.test(input,expect,506))
+        self.assertTrue(TestCodeGen.test(input,expect,507))

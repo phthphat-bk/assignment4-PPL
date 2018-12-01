@@ -58,14 +58,45 @@ class CheckCodeGenSuite(unittest.TestCase):
     #     """
     #     expect = "false"
     #     self.assertTrue(TestCodeGen.test(input,expect,506))
-    def test7(self):
-        input = """
-        procedure main();
-        var a: integer;
-        begin 
-            a := 3;
-            putInt(a);
-        end
-        """
-        expect = "false"
-        self.assertTrue(TestCodeGen.test(input,expect,507))
+    # def test7(self):
+    #     input = """
+    #     //var a: integer;
+    #     //function phat():integer;
+    #     //begin
+    #     //    a := 5;
+    #     //end
+    #     //var a:integer;
+    #     procedure main();
+    #     begin
+    #         putInt(6 div 2);
+    #     end
+    #     """
+    #     expect = "-2"
+    #     self.assertTrue(TestCodeGen.test(input,expect,507))
+    # def test8(self):
+    #     input = """
+    #     procedure main();
+    #     var x: integer;
+    #     begin
+    #         x := (5 mod 2);
+    #         putInt(x); 
+    #     end
+    #     """
+    #     expect = "1"
+    #     self.assertTrue(TestCodeGen.test(input,expect,508))
+    # def test9(self):
+    #     input = """
+    #     var a: integer;
+    #     function phat():integer;
+    #     begin
+    #         a := 5;
+    #         return 0;
+    #     end
+    #     procedure main();
+    #     begin 
+    #         a := 3;
+    #         putInt(a);
+    #     end
+    #     """
+    #     expect = "3"
+    #     self.assertTrue(TestCodeGen.test(input,expect,509))

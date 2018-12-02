@@ -467,7 +467,6 @@ class Emitter():
         #..., value1, value2 -> ..., result
 
         result = list()
-
         frame.pop()
         frame.pop()
         if op == ">":
@@ -479,9 +478,9 @@ class Emitter():
             result.append(self.jvm.emitIFICMPGE(falseLabel))
         elif op == "<=":
             result.append(self.jvm.emitIFICMPGT(falseLabel))
-        elif op == "!=":
+        elif op == "<>":
             result.append(self.jvm.emitIFICMPEQ(falseLabel))
-        elif op == "==":
+        elif op == "=":
             result.append(self.jvm.emitIFICMPNE(falseLabel))
         result.append(self.jvm.emitGOTO(trueLabel))
         return ''.join(result)
